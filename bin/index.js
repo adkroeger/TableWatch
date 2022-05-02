@@ -2,12 +2,15 @@
 
 const mysql = require("mysql");
 const mySqlEvents = require("@rodrigogs/mysql-events");
+const dotenv = require('dotenv');
 
 const exec = async () => {
+   dotenv.config();
+
    const connection = mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: 'root'
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PW
    });
    
    const instance = new mySqlEvents(connection, {
@@ -18,10 +21,10 @@ const exec = async () => {
 
    instance.addTrigger({
       name: "monitoring all statements",
-      expression: "TestDb.*",
+      expression: "da-adkr.*",
       statement: mySqlEvents.STATEMENTS.ALL,
       onEvent: (event) => {
-         console.log(event);
+         console.dir(event);
       }
    })
 };
