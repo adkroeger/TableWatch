@@ -1,0 +1,22 @@
+{
+  "name": "table-watch",
+  "version": "1.0.0",
+  "description": "Table watch PoC",
+  "main": "bin/index.js",
+  "bin": {
+    "run-table-watch": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adkroeger/TableWatch.git"
+  },
+  "author": "Adrian Kröger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adkroeger/TableWatch/issues"
+  },
+  "homepage": "https://github.com/adkroeger/TableWatch#readme"
+}
